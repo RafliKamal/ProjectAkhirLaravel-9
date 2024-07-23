@@ -48,7 +48,7 @@
             padding-left: 10px;
         }
         .soal-image {
-            margin-left: 30px;
+            margin-left: 40px;
             margin-top: 10px;
         }
         @media print {
@@ -68,14 +68,17 @@
                 </td>
                 <td class="align-middle">
                     <div class="title">
-                        <h3>JURUSAN {{$x->matkul->prodi->namaProdi}}</h3>
-                        <h3>POLITEKNIK ENJINERING INDORAMA</h3>
-                        <h4>SOAL {{$x->jenisUjian}}</h4>
+                        <h4><strong>JURUSAN {{$x->matkul->prodi->namaProdi}}
+                            </strong> </h4>
+                        <h4><strong>POLITEKNIK ENJINERING INDORAMA
+                            </strong> </h4>
+                        <hr>
+                        <h4><strong> SOAL {{$x->jenisUjian}}</strong></h4>
                     </div>
                 </td>
                 <td class="align-middle">
                     <div class="eva">
-                        <h4>EVA</h4>
+                        <h2><strong>EVA</strong></h2>
                     </div>
                 </td>
             </tr>
