@@ -1,66 +1,182 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
+<h1 align="center"> SIMU-PEI
+</h1>
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Logo-pei.png/500px-Logo-pei.png" width="150" alt="Logo PEI">
 </p>
 
-## About Laravel
+<p align="center">
+  <b>Sistem Informasi Manajemen Ujian - Politeknik Enjinering Indorama</b>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+##  Tentang SIMU-PEI
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**SIMU-PEI** (Sistem Informasi Manajemen Ujian PEI) adalah sebuah aplikasi web berbasis Laravel yang dirancang untuk mengelola berbagai aspek yang berkaitan dengan ujian di lingkungan Kampus Politeknik Enjinering Indorama (PEI).
 
-## Learning Laravel
+Sistem ini membantu dalam proses manajemen ujian mulai dari pembuatan soal, pengaturan jadwal ujian, hingga review dan persetujuan soal ujian.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+##  Fitur Utama
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+###  Manajemen User
+- CRUD (Create, Read, Update, Delete) data pengguna
+- Pencarian pengguna
+- Multi-role: Admin, Kaprodi, Dosen, Mahasiswa
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+###  Manajemen Mata Kuliah
+- CRUD data mata kuliah
+- Integrasi dengan Program Studi
+- Penugasan dosen pengampu
 
-## Laravel Sponsors
+###  Manajemen Program Studi
+- CRUD data program studi
+- Data Ketua Program Studi
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+###  Manajemen Soal
+- Upload dan kelola bank soal
+- Klasifikasi soal berdasarkan mata kuliah
+- Support file attachment
 
-### Premium Partners
+###  Manajemen Ujian
+- Pembuatan jadwal ujian
+- Pengaturan tipe soal (Pilihan Ganda, Essay, Campuran)
+- Pengaturan durasi dan sifat ujian
+- Status persetujuan ujian
+- Generate PDF soal ujian
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+###  Review & Persetujuan
+- Review soal ujian oleh Kaprodi
+- Sistem persetujuan/revisi soal
+- Komentar dan feedback
 
-## Contributing
+##  Teknologi yang Digunakan
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Framework**: Laravel 9
+- **Database**: MySQL
+- **Frontend**: Blade Template, Bootstrap (Corona Admin Template)
+- **PDF Generator**: DomPDF
 
-## Code of Conduct
+##  Struktur Database
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+| Tabel | Deskripsi |
+|-------|-----------|
+| `users` | Data pengguna sistem |
+| `tb_prodi` | Data program studi |
+| `tb_matkul` | Data mata kuliah |
+| `tb_ujian` | Data ujian |
+| `tb_soal` | Data soal ujian |
 
-## Security Vulnerabilities
+##  Instalasi
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Prasyarat
+- PHP >= 8.1
+- Composer
+- MySQL
+- Node.js & NPM
 
-## License
+### Langkah Instalasi
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/username/simu-pei.git
+   cd simu-pei
+   ```
+
+2. **Install dependencies**
+   ```bash
+   composer install
+   npm install
+   ```
+
+3. **Setup environment**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+
+4. **Konfigurasi database di file `.env`**
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=simu_pei
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+
+5. **Jalankan migrasi dan seeder**
+   ```bash
+   php artisan migrate:fresh --seed
+   ```
+
+6. **Jalankan aplikasi**
+   ```bash
+   php artisan serve
+   ```
+
+7. **Akses aplikasi di browser**
+   ```
+   http://localhost:8000
+   ```
+
+## 👥 Akun Default
+
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | admin@gmail.com | admin123 |
+| Dosen | udin@gmail.com | udin |
+| Dosen | budi@gmail.com | budi123 |
+| Mahasiswa | ahmad@gmail.com | ahmad123 |
+| Mahasiswa | siti@gmail.com | siti123 |
+| Mahasiswa | rizky@gmail.com | rizky123 |
+
+##  Role dan Hak Akses
+
+| Role | Hak Akses |
+|------|-----------|
+| **Admin** | Mengelola semua data master (User, Prodi, Matkul) |
+| **Kaprodi** | Review dan approve/revisi soal ujian, melihat ujian di prodinya |
+| **Dosen** | Membuat soal ujian, mengelola bank soal, membuat jadwal ujian |
+| **Mahasiswa** | Melihat jadwal ujian |
+
+##  Struktur Folder Utama
+
+```
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── LoginController.php
+│   │   ├── PDFController.php
+│   │   └── ProjectAkhirController.php
+│   └── Models/
+│       ├── User.php
+│       ├── tbProdi.php
+│       ├── tbMatkul.php
+│       ├── tbUjian.php
+│       └── tbSoal.php
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── resources/
+│   └── views/
+│       ├── admin/
+│       ├── dashboard.blade.php
+│       ├── login.blade.php
+│       └── ...
+└── routes/
+    └── web.php
+```
+
+##  Pengembang
+
+- **Nama**: M. Rafli Kamal
+- **NIM**: 202204013
+- **Program Studi**: Teknologi Rekayasa Perangkat Lunak
+- **Mata Kuliah**: Pemrograman Web 3
+
+##  Lisensi
+
+Proyek ini dikembangkan untuk keperluan akademik di Politeknik Enjinering Indorama.
+
+---
+
